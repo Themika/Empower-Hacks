@@ -1,0 +1,64 @@
+.assistant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Changed from center to space-between */
+    height: 100vh; /* Adjust for padding */
+    width: 94vw; /* Full width of the window */
+    background-color: #f5f5f5; /* Match the dashboard background */
+    font-family: 'Arial', sans-serif; /* Use same font family */
+    margin-left: 0; /* Remove margin to use full width */
+    padding: 20px; /* Add padding for aesthetics */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin-left: 100px;
+  }
+  
+  .assistant-button {
+    background-color: #00048a; /* Match navbar background color */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .assistant-button:hover {
+    background-color: #00028a; /* Darker blue on hover */
+  }
+  
+  .assistant-advice {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for consistency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match dashboard shadow */
+    max-width: 600px; /* Limit the width for better readability */
+    width: 100px;
+    text-align: left;
+  }
+  
+  .assistant-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #273c75; /* Use dashboard text color */
+  }
+  
+  .chatting-area {
+    position: absolute; /* Add this to move the chatting area to the bottom */
+    bottom: 0; /* Move to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 85%; 
+    margin-top: 20px;
+    padding: 20px; 
+    border-radius: 10px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
+  }

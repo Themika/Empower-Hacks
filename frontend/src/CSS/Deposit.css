@@ -1,0 +1,76 @@
+
+.deposit {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.background-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  position: relative;
+  border-radius: 25px;
+  background-color: #edf9ff;
+  width: 110px;
+  height: 110px;
+}
+
+.image-money-bag {
+  width: 100px;
+}
+
+.right-text {
+  margin-left: 30px;
+}
+
+.value-container {
+  display: flex;
+  font-size: 18px;
+}
+
+.value-1, .value-2 {
+  margin-right: 5px;
+}
+.value-1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.value-2 {
+  color: #666;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  background-color: #1aa8e9;
+  height: 20px;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+.deposit:hover {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}

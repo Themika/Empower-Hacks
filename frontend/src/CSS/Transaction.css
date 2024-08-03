@@ -1,0 +1,83 @@
+.transaction-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative; /* Allows positioning child elements */
+}
+
+.transaction-card:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.transaction-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    flex-grow: 1;
+    margin-right: 200px; /* Increase margin to accommodate amount and status */
+}
+
+.transaction-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}
+
+.transaction-date {
+    color: #888;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.transaction-amount-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute; /* Absolute positioning */
+    bottom: 15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    gap: 5px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.transaction-status {
+    font-size: 0.9em;
+}
+
+.transaction-status.unknown {
+    color: gray;
+}
+
+.transaction-status.completed {
+    color: green;
+}
+
+.transaction-status.pending {
+    color: orange;
+}
+
+.transaction-status.failed {
+    color: red;
+}

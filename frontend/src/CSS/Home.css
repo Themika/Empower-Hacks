@@ -1,0 +1,114 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Modern font */
+    color: #343458; /* Dark grey text for better readability */
+}
+
+.home {
+    background-color: #134B70; /* Dark background color */
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.navbar {
+    width: 200px; /* Width of the vertical navbar */
+    background-color: #212155; /* Dark blue background for navbar */
+    color: #fff; /* White text for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: fixed; /* Fixed position for the navbar */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the viewport */
+}
+
+.navbar a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    margin: 15px 0; /* Vertical spacing between items */
+    font-size: 1.1rem; /* Font size for navbar links */
+    display: block; /* Block display for easier clicking */
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: image and text */
+    gap: 20px; /* Space between the image and text */
+    margin-left: 220px; /* Space for the navbar */
+    width: calc(100% - 220px); /* Adjust width to fit the available space */
+}
+
+.section-text {
+    width: 100vw; /* Use full width of the grid column */
+    padding: 30px; /* Add some padding for spacing */
+    margin-left: 250px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for a modern look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    text-align: left; /* Align text to the left */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:  center;
+}
+
+h1 {
+    font-size: 3rem; /* Adjusted font size for heading */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #212155; /* Dark blue color for the heading */
+}
+
+p {
+    font-size: 1.1rem; /* Slightly larger paragraph text */
+    line-height: 1.6; /* Improve readability */
+    color: #343458; /* Slightly lighter text color for paragraphs */
+}
+
+img {
+    width: 100%; /* Full width of the grid column */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Max width for larger screens */
+    object-fit: cover; /* Ensure the image covers the assigned area */
+    display: block; /* Ensure image is displayed */
+    border-radius: 25px; /* Rounded corners */
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; /* Stack image and text vertically on smaller screens */
+        gap: 0; /* Remove gap between items */
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width */
+    }
+
+    .section-text {
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: none; /* Remove max-width for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph text size for smaller screens */
+    }
+
+    .navbar {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Adjust height for content */
+        position: static; /* Static position for better mobile layout */
+        margin-bottom: 20px; /* Space below navbar */
+    }
+
+    img {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
