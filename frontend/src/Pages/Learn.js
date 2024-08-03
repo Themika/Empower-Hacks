@@ -3,11 +3,12 @@ import Card from "../Components/Card";
 import Navbar from "../Components/Navbar";
 import "../CSS/Learning.css";
 import Modal from "../Components/learnModal"; // Correctly import the Modal component
-import image from "../Media/1.png"
+import image from "../Media/1.png";
 
 const Learning = () => {
   const [data, setData] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null); // State for the selected card
+  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
 
   useEffect(() => {
     const getData = async () => {
@@ -44,7 +45,7 @@ const Learning = () => {
         const data9 = await fetchData(9);
         const data10 = await fetchData(10);
         const data11 = await fetchData(11);
-        setData([...data0, ...data1, ...data2,...data3, ...data4,...data5, ...data6, ...data7, ...data8,...data9,...data10,...data11 ]); // Combine data from both endpoints
+        setData([...data0, ...data1, ...data2, ...data3, ...data4, ...data5, ...data6, ...data7, ...data8, ...data9, ...data10, ...data11]); // Combine data from both endpoints
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
@@ -60,13 +61,27 @@ const Learning = () => {
     setSelectedCard(null); // Close the modal
   };
 
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value); // Update the search query state
+  };
+
+  const filteredData = data.filter(item => 
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  ); // Filter data based on the search query
+
   return (
     <div className="learning">
-      <input type="text" className="search-bar" placeholder="Search..." />
+      <input 
+        type="text" 
+        className="search-bar" 
+        placeholder="Search..." 
+        value={searchQuery} 
+        onChange={handleSearchChange} // Handle search input change
+      />
       <Navbar />
       <div className="home-learning">
         <div className="home-card">
-          {Array.isArray(data) && Array.from({ length: 12 }).flatMap(() => data).map((item, index) => (
+          {Array.isArray(filteredData) && filteredData.map((item, index) => (
             <Card
               key={index}
               image={image} // Ensure the item contains an image
