@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import Card from "../Components/Card";
 import Navbar from "../Components/Navbar";
 import "../CSS/Learning.css";
-import Modal from "../Components/learnModal"; // Correctly import the Modal component
+import Modal from "../Components/learnModal"; 
 import image from "../Media/1.png";
 
 const Learning = () => {
   const [data, setData] = useState([]);
-  const [selectedCard, setSelectedCard] = useState(null); // State for the selected card
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
-
+  const [selectedCard, setSelectedCard] = useState(null); 
+  const [searchQuery, setSearchQuery] = useState(""); 
   useEffect(() => {
     const getData = async () => {
       try {
@@ -22,7 +21,7 @@ const Learning = () => {
             if (Array.isArray(data)) {
               return data;
             } else if (data && typeof data === 'object') {
-              return [data]; // Convert the single object to an array
+              return [data]; 
             } else {
               console.error("Error: Data is neither an array nor an object");
               return [];
