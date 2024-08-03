@@ -15,13 +15,14 @@ html, body {
   }
   
   .search-bar {
-    width: 80%;
+    width: 50%;
     max-width: 600px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
     font-size: 1rem;
+    margin-right: 180px;
   }
   
   .search-bar:focus {
@@ -34,7 +35,7 @@ html, body {
     display: grid; /* Use grid layout for transactions */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
     gap: 20px; /* Space between grid items */
-    margin-left: 250px;
+    margin-left: 350px;
   }
   
   .transaction-card {

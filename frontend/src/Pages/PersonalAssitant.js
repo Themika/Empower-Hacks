@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/PersonalAsistant.css"; 
 import Navbar from "../Components/Navbar";
 
+
 const PersonalAssistant = () => {
   const [financeData, setFinanceData] = useState([]);
   const [messages, setMessages] = useState([
@@ -30,13 +31,13 @@ const PersonalAssistant = () => {
   const sendMessage = async () => {
     setMessages([...messages, { role: "user", content: inputValue }]);
     setLoading(true);
-
+  
     const url =
       "https://cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com/v1/chat/completions";
     const options = {
       method: "POST",
       headers: {
-        "x-rapidapi-key": "21c98ce353msh2e77624f518ce0bp1fb9f3jsn84b6d813ebd7",
+        "x-rapidapi-key": "YOUR_API_KEY",
         "x-rapidapi-host":
           "cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com",
         "Content-Type": "application/json",
@@ -62,15 +63,20 @@ const PersonalAssistant = () => {
         temperature: 0.7,
       }),
     };
-
+  
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      const assistantResponse = result.choices[0].message.content;
-      const formattedResponse = assistantResponse.replace(/[#*]/g, "").trim();
-      setMessages([...messages, { role: "user", content: inputValue }, { role: "assistant", content: formattedResponse }]);
+      console.log(result); // Log the entire response
+      if (result.choices && result.choices.length > 0) {
+        const assistantResponse = result.choices[0].message.content;
+        const formattedResponse = assistantResponse.replace(/[#*]/g, "").trim();
+        setMessages([...messages, { role: "user", content: inputValue }, { role: "assistant", content: formattedResponse }]);
+      } else {
+        console.error("Unexpected API response format:", result);
+      }
     } catch (error) {
-      console.error(error);
+      console.error("API request failed:", error);
     } finally {
       setLoading(false);
       setInputValue("");
