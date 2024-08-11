@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Empower-Hacks/static/css/main.f0eb3015.css",
-    "main.js": "/Empower-Hacks/static/js/main.1413911a.js",
+    "main.js": "/Empower-Hacks/static/js/main.ce1c5766.js",
     "static/media/1.png": "/Empower-Hacks/static/media/1.93c0735b439ffa32aaa8.png",
     "static/media/1571098.png": "/Empower-Hacks/static/media/1571098.eb8fda989bb47f7a0562.png",
     "static/media/ori_3740563_rftrnckni7dn4mw3ir8nyi2cp7c30c0nvrp0ugsa_finance-flat-design-vector-illustration-removebg-preview.jpg": "/Empower-Hacks/static/media/ori_3740563_rftrnckni7dn4mw3ir8nyi2cp7c30c0nvrp0ugsa_finance-flat-design-vector-illustration-removebg-preview.a4064cc58f6ea8305006.jpg",
     "index.html": "/Empower-Hacks/index.html",
     "main.f0eb3015.css.map": "/Empower-Hacks/static/css/main.f0eb3015.css.map",
-    "main.1413911a.js.map": "/Empower-Hacks/static/js/main.1413911a.js.map"
+    "main.ce1c5766.js.map": "/Empower-Hacks/static/js/main.ce1c5766.js.map"
   },
   "entrypoints": [
     "static/css/main.f0eb3015.css",
-    "static/js/main.1413911a.js"
+    "static/js/main.ce1c5766.js"
   ]
 }
